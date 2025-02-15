@@ -1,2 +1,2 @@
-# AuQa
-Surf with AuQa, next gen proxy.
+# Trillium
+Surf with Trillium, next gen proxy.
