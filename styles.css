@@ -1,1 +1,240 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+:root {
+  --nav-height: 48px;
+  --sidebar-width: 48px;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --text-primary: rgba(255, 255, 255, 0.9);
+  --text-secondary: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: var(--text-primary);
+  background-image: url('https://64.media.tumblr.com/f5380d5f80ad4786c2ec88c1cfbf7638/4ba7ad635ccb47ed-9d/s640x960/34ea112ed57bb7dc3da19e6ae15780e6bb4a96a1.gif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow: hidden;
+  letter-spacing: 0.2px;
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  gap: 0.75rem;
+  height: var(--nav-height);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(20px);
+}
+
+.nav-logo {
+  width: 30px;
+  height: 23px;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: none;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: border-color 0.2s ease;
+}
+
+.search-bar:focus-within {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.search-bar input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 13px;
+  outline: none;
+  letter-spacing: 0.2px;
+}
+
+.search-bar input::placeholder {
+  color: var(--text-secondary);
+}
+
+.search-button {
+  align-items: center;
+  background: none;
+  width: 16px;
+  height: 16px;
+  border: none;
+  color: var(--text-secondary);
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: var(--nav-height);
+  bottom: 0;
+  width: var(--sidebar-width);
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding-top: 0.5rem;
+  border-right: 1px solid var(--border-color);
+  backdrop-filter: blur(20px);
+}
+
+.sidebar button {
+  all: unset;
+  width: var(--sidebar-width);
+  height: var(--sidebar-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 16px;
+  position: relative;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar button:hover {
+  color: var(--text-primary);
+  transform: scale(1.1);
+}
+
+.sidebar button.active {
+  color: var(--text-primary);
+}
+
+.sidebar button.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0 2px 2px 0;
+}
+
+.sidebar button:focus {
+  outline: none;
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-content {
+  margin-left: var(--sidebar-width);
+  padding: 2rem;
+  height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 580px;
+  margin-bottom: 4rem;
+}
+
+.main-search {
+  width: 100%;
+  background: none;
+  border-radius: 16px;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.main-search:focus-within {
+  transform: scale(1.01);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.main-search input {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 15px;
+  outline: none;
+  letter-spacing: 0.2px;
+}
+
+.main-search input::placeholder {
+  color: var(--text-secondary);
+}
+
+.main-search .search-icon {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.main-search .search-button {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.main-search .search-button:hover {
+  color: var(--text-primary);
+}
