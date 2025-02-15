@@ -10,13 +10,14 @@
   --border-color: rgba(255, 255, 255, 0.2);
   --text-primary: rgba(255, 255, 255, 0.9);
   --text-secondary: rgba(255, 255, 255, 0.6);
+  --cherry-blossom: url('https://64.media.tumblr.com/f5380d5f80ad4786c2ec88c1cfbf7638/4ba7ad635ccb47ed-9d/s640x960/34ea112ed57bb7dc3da19e6ae15780e6bb4a96a1.gif');
 }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   color: var(--text-primary);
-  background-image: url('https://64.media.tumblr.com/f5380d5f80ad4786c2ec88c1cfbf7638/4ba7ad635ccb47ed-9d/s640x960/34ea112ed57bb7dc3da19e6ae15780e6bb4a96a1.gif');
+  background-image: var(--cherry-blossom);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
