@@ -83,23 +83,34 @@
         font-size: 14px;
       }
       
+      .bookmarks-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
       .bookmark {
+        width: 40px;
+        height: 40px;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
         color: var(--text-primary);
         text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .bookmark:hover {
+        background-color: rgba(255, 255, 255, 0.2);
       }
 
       .bookmark svg {
         fill: var(--text-primary);
-        width: 20px;
-        height: 20px;
-      }
-
-      .bookmark span {
-        font-size: 14px;
-        color: var(--text-primary);
+        width: 24px;
+        height: 24px;
       }
     </style>
   </head>
