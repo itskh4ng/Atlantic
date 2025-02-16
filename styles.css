@@ -11,14 +11,14 @@
   --text-primary: rgba(255, 255, 255, 0.9);
   --text-secondary: rgba(255, 255, 255, 0.6);
   --cherry-blossom: url('https://64.media.tumblr.com/f5380d5f80ad4786c2ec88c1cfbf7638/4ba7ad635ccb47ed-9d/s640x960/34ea112ed57bb7dc3da19e6ae15780e6bb4a96a1.gif');
-  --midnight-blossom: url('https://i.pinimg.com/originals/a8/65/01/a8650109225aeeb8cd6f153b5d3d0c05.gif');
+  --white-blossom: url('https://i.pinimg.com/originals/49/e4/4b/49e44b6771c32e08e69d3f24040fd59d.gif');
 }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   color: var(--text-primary);
-  background-image: var(--midnight-blossom);
+  background-image: var(--white-blossom);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
