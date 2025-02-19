@@ -1,7 +1,7 @@
 (function () {
     const themes = {
         cherry: {
-            "--img": "url('https://64.media.tumblr.com/f5380d5f80ad4786c2ec88c1cfbf7638/4ba7ad635ccb47ed-9d/s640x960/34ea112ed57bb7dc3da19e6ae15780e6bb4a96a1.gif')",
+            "--img": "url('https://i.imgur.com/SAh2P1S.jpeg')",
         },
         white: {
             "--img": "url('https://i.pinimg.com/originals/49/e4/4b/49e44b6771c32e08e69d3f24040fd59d.gif')",
