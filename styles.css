@@ -18,7 +18,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   color: var(--text-primary);
-  background-image: var(--white-blossom);
+  background-image: var(--img);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
