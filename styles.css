@@ -40,12 +40,12 @@ nav {
 }
 
 .nav-logo {
-  width: 23px;
-  height: 23px;
+  width: 28px;
+  height: 28px;
+  background: url('atlantic.png') no-repeat center/cover;
   border-radius: 8px;
-  background: none;
+  opacity: 0.1;
   cursor: pointer;
-  text-align: center;
   transition: transform 0.2s ease;
 }
 
