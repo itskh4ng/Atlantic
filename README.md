@@ -1,2 +1,2 @@
-# Trillium
-Surf with Trillium, next gen proxy.
+# Alantic
+Surf with Alantic, next gen proxy.
