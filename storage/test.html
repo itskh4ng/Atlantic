@@ -1,26 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <style>
-        .search-container {
-            display: none;
-        }
-    </style> 
-</head>
-
-<body>
-    <div class="container">
-        <div class="overlay"></div>
-        <div class="container-inner">
-            <div class="search-container">
-                <div class="search-box">
-                    <input type="text" class="input" placeholder="Search through the web freely...">
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="../uv/uv.bundle.js"></script>
     <script src="../uv/uv.config.js"></script>
     <script src="../assets/register-sw.js"></script>
@@ -28,24 +5,21 @@
     <script>document.addEventListener("DOMContentLoaded",function(){const img=document.createElement("img");img.src="../assets/atlantic.png";img.style.position="absolute";img.style.top="50%";img.style.left="50%";img.style.transformOrigin="center";img.style.transform="translate(-50%, -50%) scale(1)";img.style.width="50px";img.style.height="auto";img.style.opacity="0.3";img.style.transition="transform 0.5s ease-in-out";document.body.appendChild(img);let growing=true,rotating=0;function animate(){img.style.transform=`translate(-50%, -50%) scale(${growing?1.67:1}) rotate(${rotating}deg)`;rotating+=20;growing=!growing;setTimeout(animate,500)}animate()});</script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-  const apps = {
-    tiktok: 'https://www.tiktok.com',
-    twitter: 'https://twitter.com',
-    facebook: 'https://facebook.com',
-    // Add more apps and their URLs here
-  };
+    document.addEventListener('DOMContentLoaded', () => {
+        const apps = {
+            tiktok: 'https://www.tiktok.com',
+            twitter: 'https://twitter.com',
+            facebook: 'https://facebook.com'
+        };
 
-  // Get the app from the URL hash
-  const hash = window.location.hash.substring(1); // Get the part after the '#'
+        const hash = window.location.hash.substring(1);
 
-  if (hash && apps[hash]) {
-    // Use __uv to proxy the URL based on the hash
-    const appUrl = apps[hash];
-    window.location.href = __uv$config.prefix + __uv$config.encodeUrl(appUrl);
-  }
-});
-    </script>
+        if (hash && apps[hash]) {
+            const appUrl = apps[hash];
+            window.location.href = __uv$config.prefix + __uv$config.encodeUrl(appUrl);
+        }
+    });
+</script>
 
 </body>
 
