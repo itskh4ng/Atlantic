@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <style>
-        .search-container {
-            display: none;
-        }
-    </style> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/theme.js"></script>
 </head>
-
-<body>
-    <div class="container">
-        <div class="overlay"></div>
-        <div class="container-inner">
-            <div class="search-container">
-                <div class="search-box">
-                    <input type="text" class="input" placeholder="Search through the web freely...">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="../uv/uv.bundle.js"></script>
-    <script src="../uv/uv.config.js"></script>
-    <script src="../assets/register-sw.js"></script>
-    <script src="../assets/script.js" defer></script>
-    <script>document.addEventListener("DOMContentLoaded",function(){const img=document.createElement("img");img.src="../assets/atlantic.png";img.style.position="absolute";img.style.top="50%";img.style.left="50%";img.style.transformOrigin="center";img.style.transform="translate(-50%, -50%) scale(1)";img.style.width="50px";img.style.height="auto";img.style.opacity="0.3";img.style.transition="transform 0.5s ease-in-out";document.body.appendChild(img);let growing=true,rotating=0;function animate(){img.style.transform=`translate(-50%, -50%) scale(${growing?1.67:1}) rotate(${rotating}deg)`;rotating+=20;growing=!growing;setTimeout(animate,500)}animate()});</script>
-
-</script>
-</script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-  const tiktokUrl = 'https://www.tiktok.com';
-  window.location.href = __uv$config.prefix + __uv$config.encodeUrl(tiktokUrl);
-});
-
-    </script>
-
+<body class="text-white p-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    
+    <button onclick="openApp('../storage/crazygames.html')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300 text-white">
+      <div class="w-12 h-12 overflow-hidden mb-2">
+        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]" src="https://artoonsolutions.com/wp-content/uploads/2023/12/ICON-IMAGE-03.png">
+      </div>
+      <div class="text-center md:text-left">
+        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">Crazy Games</h3>
+        <h2 class="text-xs text-gray-400">CrazyGames features the latest and best free online games...</h2>
+      </div>
+    </button>
+    
+    <button onclick="openApp('../storage/geforce.html')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300 text-white">
+      <div class="w-12 h-12 overflow-hidden mb-2">
+        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]" src="https://play-lh.googleusercontent.com/_-b_HQXrVyyhZSHj_BoE9u_-cxkcHDH_yLX5rDjJsFMIfsCNQs9F3QP4JvEFcWaSIz0=s96">
+      </div>
+      <div class="text-center md:text-left">
+        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">GeForce</h3>
+        <h2 class="text-xs text-gray-400">GeForce NOW instantly transforms your device into a gaming rig...</h2>
+      </div>
+    </button>
+    
+    <!-- Add more buttons following the same structure -->
+  </div>
+  
+  <script>
+    function openApp(url) {
+  window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+}
+  </script>
 </body>
-
 </html>
