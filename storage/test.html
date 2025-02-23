@@ -1,200 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../assets/theme.js"></script>
+    <style>
+        .search-container {
+            display: none;
+        }
+    </style> 
 </head>
-<body class="text-white p-4"> 
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    <button onclick="openApp('crazygames.com')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300 text-white no-underline">
-      <div class="w-12 h-12 overflow-hidden mb-2">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://artoonsolutions.com/wp-content/uploads/2023/12/ICON-IMAGE-03.png">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">Crazy Games</h3>
-        <h2 class="text-xs text-gray-400">CrazyGames features the latest and best free online games. You can enjoy playing fun games without interruptions from downloads, intrusive ads, or pop-ups.</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <button onclick="openApp('play.geforcenow.com')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://play-lh.googleusercontent.com/_-b_HQXrVyyhZSHj_BoE9u_-cxkcHDH_yLX5rDjJsFMIfsCNQs9F3QP4JvEFcWaSIz0=s96">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">GeForce</h3>
-        <h2 class="text-xs text-gray-400">GeForce NOW instantly transforms your laptop, desktop, Mac, TV, Android device, iPhone, or iPad into the powerful PC gaming rig you've always dreamed of..</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <button onclick="openApp('easyfun.gg')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://consumersiteimages.trustpilot.net/business-units/66c9e3066557657d6b43686b-198x149-2x.avif">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">EasyFun</h3>
-        <h2 class="text-xs text-gray-400">Enjoy the mobile games online for free! Smooth, download-free, lag-free. Simply access EasyFun.gg on your browser, a free cloud gaming platform.</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <button onclick="openApp('itch.io')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="../assets/imageedit_2_4765995192.png">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">ITCH.IO</h3>
-        <h2 class="text-xs text-gray-400">itch.io is a simple way to find, download and distribute indie games online. Whether you're a developer looking to upload your game or just someone looking ...</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <button onclick="openApp('orteil.dashnet.org/cookieclicker')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://play-lh.googleusercontent.com/Z1MOuuiD05ZN5LkVmMEvKF0mqAc-FknaQ2j8s4dZiO-LSPQX4EEA3RVJdlQEtxe96ok=w480-h960">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">Cookie Clicker</h3>
-        <h2 class="text-xs text-gray-400">Play Cookie Clicker, the ultimate idle game where you build your Cookie Empire by clicking, upgrading, and unlocking achievements.</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <button onclick="openApp('opiumm.pages.dev/games/subway-surfers-ny')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=628,height=628,fit=cover,f=auto/ed133f34885eafc2ef24715927ecb499.png">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">Subway Surfers</h3>
-        <h2 class="text-xs text-gray-400">DASH as fast as you can! DODGE the oncoming trains! Help Jake, Tricky & Fresh escape from the grumpy Inspector and his dog.</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <a href="https://game316009.konggames.com/gamez/0031/6009/live/index.html" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://i.imgur.com/GhpKoRI.jpeg">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">Retro Bowl</h3>
-        <h2 class="text-xs text-gray-400">Retro Bowl is an American style football game created by New Star Games. Are you ready to manage your dream team into victory?</h2>
-      </div>
-    </a>
-    <!-- MORE -->
-    <a href="https://staging.bloxd.io/" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Bloxd.io_Logo.jpeg/1200px-Bloxd.io_Logo.jpeg">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">BLOXD.IO</h3>
-        <h2 class="text-xs text-gray-400">Play free online games like bedwars, skywars. Build, pvp, and explore in block worlds. No downloads, no login!</h2>
-      </div>
-    </a>
-    <!-- MORE -->
-    <button onclick="openApp('images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@c0c9f32fd575688ff4b14309e9acf19b73f15e2a/build/bs/bs.xml&container=ig')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=628,height=628,fit=cover,f=auto/bc02c9cdfc5b424ddf343b01edf791ce.png">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">Basketball Stars</h3>
-        <h2 class="text-xs text-gray-400">Basketball Stars is a basketball game where you join in thrilling matches right on your device. Choose your favorite legendary and kick off all opponents!</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <button onclick="openApp('games.s3.yandex.net/166711/zixgpmuvi1j4ahqkxmecru1jxp7yz0ew/index.html')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=628,height=628,fit=cover,f=auto/c4dc286c30b8fbde45a0b5d4fe6f2146.png">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">Fruit Ninja</h3>
-        <h2 class="text-xs text-gray-400">Choose your blade, unleash your inner ninja! Slice fruit, don't slice bombs – that's all you need to know to get started with addictive Fruit Ninja action!</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <button onclick="openApp('stickman.pro/iframe/index.html')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRHHWORpOrlT0v_rTcipfgVCGE3xag6666pD3f7hId-p5zRyTP7GMsXgZQRDMMgcB4UYDmstHMqRYCilMnafrxYplnbUUaqrJZQVPnhBQ">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">Stickman Hook</h3>
-        <h2 class="text-xs text-gray-400">In Stickman Hook, players must use their skills to navigate through various levels filled with obstacles such as spikes, swinging hammers, and moving platforms.</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <button onclick="openApp('assets.shuttlemath.com/2048')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://play-lh.googleusercontent.com/YMjBRDCr5a9p_bdWnMTWKrC3FNi40WsR4jXt1UXlNMZfRhoXQL3eAkIwXAk5wwQZ_g">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">2048</h3>
-        <h2 class="text-xs text-gray-400">Join the numbers and get to the 2048 tile! Swipe to move all tiles. When two tiles with the same number touch, they merge into one. Get to the 2048 tile ...</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <a href="https://block-blast-git-main-itskh4ng.vercel.app" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://play-lh.googleusercontent.com/R0qgNDYYHbRhw6JFsdEbDMqONplEvJx0m0W9wzYVvY3eNF1c2rfBWYjQxW0sLEzFe1E=w480-h960">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">Block Blast</h3>
-        <h2 class="text-xs text-gray-400">Block Blast is a free and popular block puzzle game that is your best choice when you want to pass the casual time and challenge your brain.</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <button onclick="openApp('assets.shuttlemath.com/jetpack-joyride')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/d5d34cb9ce7b617b93338982aa0958ab.png">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">Jetpack Joyride</h3>
-        <h2 class="text-xs text-gray-400">Jetpack Joyride is an action-packed endless running game where you ride crazy vehicles and shoot enemies. You are Barry Steakfries, and you need to beat all ...</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <button onclick="openApp('eaglercraft.q13x.com')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://static.wikia.nocookie.net/logopedia/images/f/f9/Minecraft_Bedrock_icon.svg">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">MineCraft</h3>
-        <h2 class="text-xs text-gray-400">Explore and craft your way through a completely open world where you can play with friends, build a block city, start a farm, mine deep into the ground, face ...</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-    <button onclick="openApp('coolmathgames.com/0-tiny-fishing/play')" class="flex flex-col items-start p-4 border border-[rgba(255,255,255,0.06)] rounded-[24px] cursor-pointer h-full w-full bg-transparent hover:bg-[#cdcfd140]/30 transition duration-300">
-      <div class="w-12 h-12 overflow-hidden mb-2 text-white no-underline">
-        <img loading="lazy" width="150" height="150" decoding="async" class="object-cover w-full h-full rounded-[14px]"
-          src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=628,height=628,fit=cover,f=auto/c8cb366d52fc2a67fb313c344efdbc9e.png">
-      </div>
-      <div class="text-center md:text-left">
-        <h3 class="mt-2 md:mt-0 font-medium pb-1 text-white">Tiny Fishing</h3>
-        <h2 class="text-xs text-gray-400">Tiny Fishing is a fishing game where you have to upgrade your gear to get bigger fish! Each fish you catch will earn you some money, which you can then ...</h2>
-      </div>
-    </button>
-    <!-- MORE -->
-  </div>
-  
-  <script>
-    function openApp(url) {
-  window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
-}
-  </script>
-  <script src="./uv/uv.bundle.js"></script>
-    <script src="./uv/uv.config.js"></script>
-    <script src="./assets/register-sw.js"></script>
-    <script src="./assets/script.js" defer></script>
+
+<body>
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="container-inner">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" class="input" placeholder="Search through the web freely...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../uv/uv.bundle.js"></script>
+    <script src="../uv/uv.config.js"></script>
+    <script src="../assets/register-sw.js"></script>
+    <script src="../assets/script.js" defer></script>
+    <script>document.addEventListener("DOMContentLoaded",function(){const img=document.createElement("img");img.src="../assets/atlantic.png";img.style.position="absolute";img.style.top="50%";img.style.left="50%";img.style.transformOrigin="center";img.style.transform="translate(-50%, -50%) scale(1)";img.style.width="50px";img.style.height="auto";img.style.opacity="0.3";img.style.transition="transform 0.5s ease-in-out";document.body.appendChild(img);let growing=true,rotating=0;function animate(){img.style.transform=`translate(-50%, -50%) scale(${growing?1.67:1}) rotate(${rotating}deg)`;rotating+=20;growing=!growing;setTimeout(animate,500)}animate()});</script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  const apps = {
+    tiktok: 'https://www.tiktok.com',
+    twitter: 'https://twitter.com',
+    facebook: 'https://facebook.com',
+    // Add more apps and their URLs here
+  };
+
+  // Create app list dynamically
+  const appList = document.createElement('ul');
+  Object.keys(apps).forEach(app => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = `#${app}`;
+    a.textContent = app.charAt(0).toUpperCase() + app.slice(1);
+    li.appendChild(a);
+    appList.appendChild(li);
+  });
+
+  document.body.appendChild(appList);
+
+  // Handle URL hash change
+  const hash = window.location.hash.substring(1); // Get the part after the '#'
+
+  if (hash && apps[hash]) {
+    const tiktokUrl = apps[hash];
+    window.location.href = __uv$config.prefix + __uv$config.encodeUrl(tiktokUrl);
+  }
+});
+    </script>
+
 </body>
+
 </html>
