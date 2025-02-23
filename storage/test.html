@@ -36,25 +36,13 @@
     // Add more apps and their URLs here
   };
 
-  // Create app list dynamically
-  const appList = document.createElement('ul');
-  Object.keys(apps).forEach(app => {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = `#${app}`;
-    a.textContent = app.charAt(0).toUpperCase() + app.slice(1);
-    li.appendChild(a);
-    appList.appendChild(li);
-  });
-
-  document.body.appendChild(appList);
-
-  // Handle URL hash change
+  // Get the app from the URL hash
   const hash = window.location.hash.substring(1); // Get the part after the '#'
 
   if (hash && apps[hash]) {
-    const tiktokUrl = apps[hash];
-    window.location.href = __uv$config.prefix + __uv$config.encodeUrl(tiktokUrl);
+    // Use __uv to proxy the URL based on the hash
+    const appUrl = apps[hash];
+    window.location.href = __uv$config.prefix + __uv$config.encodeUrl(appUrl);
   }
 });
     </script>
