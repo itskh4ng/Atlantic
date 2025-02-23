@@ -1,0 +1,39 @@
+    <script src="../uv/uv.bundle.js"></script>
+    <script src="../uv/uv.config.js"></script>
+    <script src="../assets/register-sw.js"></script>
+    <script src="../assets/script.js" defer></script>
+    <script>document.addEventListener("DOMContentLoaded",function(){const img=document.createElement("img");img.src="../assets/atlantic.png";img.style.position="absolute";img.style.top="50%";img.style.left="50%";img.style.transformOrigin="center";img.style.transform="translate(-50%, -50%) scale(1)";img.style.width="50px";img.style.height="auto";img.style.opacity="0.3";img.style.transition="transform 0.5s ease-in-out";document.body.appendChild(img);let growing=true,rotating=0;function animate(){img.style.transform=`translate(-50%, -50%) scale(${growing?1.67:1}) rotate(${rotating}deg)`;rotating+=20;growing=!growing;setTimeout(animate,500)}animate()});</script>
+
+    <script>
+    window.addEventListener('load', () => {
+        const apps = {
+            tiktok: 'https://www.tiktok.com',
+            snapchat: 'https://snapchat.com',
+            discord: 'https://discord.com',
+            nowgg: 'http://syn-174-085-104-135.res.spectrum.com:5000',
+            crazygames: 'https://www.crazygames.com',
+            geforce: 'https://play.geforcenow.com',
+            easyfun: 'https://easyfun.gg',
+            itch: 'https://itch.io',
+            cookieclicker: 'https://orteil.dashnet.org/cookieclicker',
+            subwaysurfers: 'https://opiumm.pages.dev/games/subway-surfers-ny',
+            basketballstars: 'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@c0c9f32fd575688ff4b14309e9acf19b73f15e2a/build/bs/bs.xml&container=ig',
+            fruitninja: 'https://games.s3.yandex.net/166711/zixgpmuvi1j4ahqkxmecru1jxp7yz0ew/index.html',
+            stickmanhook: 'https://stickman.pro/iframe/index.html',
+            2048: 'https://assets.shuttlemath.com/2048',
+            jetpackjoyride: 'https://assets.shuttlemath.com/jetpack-joyride',
+            minecraft: 'https://eaglercraft.q13x.com',
+            tinyfish: 'https://coolmathgames.com/0-tiny-fishing/play'
+        };
+
+        const hash = window.location.hash.substring(1);
+
+        if (hash && apps[hash]) {
+            const appUrl = apps[hash];
+            window.location.href = __uv$config.prefix + __uv$config.encodeUrl(appUrl);
+        }
+    });
+</script>
+</body>
+
+</html>
