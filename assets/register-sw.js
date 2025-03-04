@@ -1,6 +1,6 @@
 // The service worker registration script
 // This must run successfully before Ultraviolet is available to use
-const BARE_SERVER = "https://bare-sigma.yourmom.eu.org"
+const BARE_SERVER = "https://tomp.app"
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./uv-sw.js', {
