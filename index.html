@@ -72,6 +72,20 @@
         }
       }
     </script>
+    <script src="https://unpkg.com/@tomphttp/bare-client@placeholder/dist/bare.cjs"></script>
+<script>
+	console.log(bare); // { createBareClient: ..., BareClient: ... }
+
+	bare.createBareClient('http://localhost:8080/bare/').then(async (client) => {
+		const res = await client.fetch('https://api.github.com/orgs/tomphttp', {
+			headers: {
+				'user-agent': navigator.userAgent, // user-agent must be passed otherwise the API gives a 403
+			},
+		});
+
+		console.log(await res.json()); // {login: 'tomphttp', id: 98234273, ... }
+	});
+  </script>
   </body>
 </html>
 
