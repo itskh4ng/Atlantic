@@ -1,6 +1,6 @@
 // The service worker registration script
 // This must run successfully before Ultraviolet is available to use
-const BARE_SERVER = "https://muddy-rice-ba72.acsessremote.workers.dev"
+const BARE_SERVER = "https://nauka.politechnika-nova.edu.pl"
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./uv-sw.js', {
