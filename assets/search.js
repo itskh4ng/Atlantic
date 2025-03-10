@@ -3,7 +3,7 @@
     const iframe = document.getElementById("main-iframe");
 
     if (!input || !iframe) {
-      console.error("Required elements not found in the DOM.");
+      console.error("error.");
       return;
     }
 
