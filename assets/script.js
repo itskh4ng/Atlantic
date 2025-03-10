@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function formatSearch(query) {
-  // This function turns the inputted value into a Google search if it's not a normal URL
+  // This function turns the inputted value into a duckduckgo search if it's not a normal URL
   try {
     return new URL(query).toString()
   } catch (e) { }
