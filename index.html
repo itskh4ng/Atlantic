@@ -71,7 +71,7 @@
           window.location.href = url;  
         }
       }
-    </script>
+    </script><script>var iframe = document.getElementById('main-iframe'); if (iframe && iframe.contentWindow) { var iframeDocument = iframe.contentWindow.document; iframeDocument.querySelectorAll('span.header__logo.js-logo-ddg').forEach(function(element) { element.remove(); }); }</script>
   </body>
 </html>
 
